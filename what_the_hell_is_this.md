@@ -9,6 +9,7 @@ The single line in this program does a number of things...
 "Ok, that's great and all but what's all this gibberish with the `~` and `-` operators and how is the class named "HelloWorld" if there is no string in there??" you might ask. 
 
 Well, it's quite simple (conceptionally). Let's first adress the negation `-` and binary complement `~` operators that are all over the single(!) line of code. The `~` operator returns the bitwise complement of a number. The formula for that is `~n=-n-1`. Now if you negate that: `-~n = -(-n-1) = n+1`. Suddenly we have incremented n by 1 😱
+
 Of course using only that to obscure every integer would be boring so it uses two more tricks. Firstly creating integers using its constructor `int()` or by taking the length of an empty tuple `len(())` (I just thought it looked funny) to create an integer with value 0. Secondly dividing by 2 and taking powers of 2 with binary shift operators. 
 So at multiple points you will see stuff like `-~len(())<<...` which is basically just `1<<...` which just gets you a power of 2. 
 
